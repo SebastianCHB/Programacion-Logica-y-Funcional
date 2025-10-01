@@ -7,7 +7,7 @@
 
     menu ::IO()
     menu = do
-        putStrLn("=== MENU😁 👍")
+        putStrLn("=== MENU")
         putStrLn("¿Que deseas hacer?")
         putStrLn("1) Factorial")
         putStrLn("2) Suma")

@@ -42,7 +42,7 @@ retorno x y =  snd (x,y)
 
 menu ::IO()
 menu = do
-    putStrLn("=== MENU😁 👍")
+    putStrLn("=== MENU")
     putStrLn("¿Que deseas hacer?")
     putStrLn("1) Valor absoluto de un numero")
     putStrLn("2) Valor siguiente del numero de decimal a entero")
