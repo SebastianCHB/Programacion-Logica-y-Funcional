@@ -1,0 +1,74 @@
+<!-- 
+ Programacion Funcional:
+    La programacion funcional puede verse como un estilo de prograamacion donde
+    el metodo basico de computacion es la aplicacion de funciones y argumentos.
+
+    Un lenguaje de programacion funcional es un lenguaje de programacion que incentiva
+    el uso del estilo de funcional.
+
+La aproximacion Clasica:
+    Una funcion imperativa:
+        count:= 0
+        total:= 0
+        repeat
+            count:= count + 1
+            total:= total + count
+        until count = n
+
+    Esta funcion es llamada imperativa por que el metodo de computacion se basa en el almacenamiento
+    y la modificacion de variables.
+    
+    Es decir, el estado del programa cambia a medida que se ejecuta.
+
+La aproximacion de Haskell:
+    1) [a..b] usada para producir una lista de numeros entre a y b.
+    2) sum [a..b] usada para sumar todos los numeros entre a y b, o sumar todos los elementos de una lista.
+
+        Por ende, la funcion que queremos puede ser escrita como:
+            sum [1..5]
+            sum [1,2,3,4,5]
+            1 + 2 + 3 + 4 + 5
+            15
+
+    Aqui se observa el contraste entre los dos estilos de programacion o aproximaciones.
+
+Caracteristicas de Haskell:
+    1)Programas concisos
+    2)Tipado fuerte
+    3)Listas por comprension
+    4)Funciones de orden superior
+    5)Efectos monadicos
+    6)Evaluacion perezosa
+    7)Razonamiento sobre los programas
+
+1. Programas Concisos
+Significa que se pueden expresar ideas complejas con muy poco código.
+ Gracias a su alto nivel de abstracción, es posible escribir programas más cortos y legibles en comparación con lenguajes más verbosos.
+
+2. Tipado Fuerte
+Es un sistema que impone reglas estrictas sobre los tipos de datos en tiempo de compilación.
+ Esto significa que no puedes, por ejemplo, sumar un número y un texto por accidente. 
+ El compilador detecta estos errores antes de que el programa se ejecute, haciéndolo más robusto y seguro. 
+
+3. Listas por Comprensión
+Es una sintaxis especial, inspirada en la notación matemática, para crear listas de forma descriptiva. 
+Permite generar una nueva lista a partir de otra existente, aplicando filtros y transformaciones de manera muy clara y compacta.
+
+Ejemplo: [x*2 | x <- [1..5], x > 2] crea la lista [6, 8, 10].
+
+4. Funciones de Orden Superior
+Son funciones que pueden recibir otras funciones como argumentos o devolver funciones como resultado. 
+Esta capacidad permite crear código mucho más genérico, reutilizable y potente.
+
+5. Efectos Monádicos
+Es la técnica que usa Haskell para gestionar los "efectos secundarios" (como la entrada/salida de datos o el manejo de errores) de forma controlada y explícita. 
+Las mónadas "envuelven" las operaciones impuras, separándolas del código puro y predecible.
+
+6. Evaluación Perezosa
+Es la estrategia de retrasar el cálculo de una expresión hasta que su resultado sea estrictamente necesario. 
+Esto permite optimizar el rendimiento al evitar cálculos inútiles y hace posible trabajar con estructuras de datos infinitas (como una lista de todos los números primos).
+
+7. Razonamiento sobre los Programas
+Se refiere a la facilidad con la que se puede demostrar que un programa es correcto y predecir su comportamiento.
+ Gracias a la "pureza" (funciones sin efectos secundarios), una función en Haskell se comporta como una función matemática: 
+ para la misma entrada, siempre produce la misma salida, lo que simplifica enormemente el análisis y la depuración. 
