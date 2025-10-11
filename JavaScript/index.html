@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simpsons Dropbox</title>
     <link href="https://fonts.cdnfonts.com/css/simpsonfont" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<link rel="stylesheet" href="./css/styles.css">
 <body>
     <header>
         <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/The_Simpsons_Logo.svg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/The_Simpsons_Logo.svg" alt="The Simpsons Logo">
         </div>
         <nav>
-            <a href="">Mostrar todo</a>
-            <a href="">Edad</a>
-        </nav>
-        <div>
-            <div class="search">
-                <input type="search">
+            <a href="#" id="mostrarTodo">Mostrar todo</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Ordenar ▼</a>
+                 <div class="dropdown-content">
+                    <a href="#" id="fallecidos">Fallecidos</a>
+                    <a href="#" id="menores">Menores de Edad</a>
+                    <a href="#" id="promedio">Promedio de Edad</a>
+                    <a href="#" id="ordenEdad">Orden de Edad</a>
+                    <a href="#" id="viejo_joven">Viejo y Joven</a>
+                    <a href="#" id="students">Estudiantes</a>
+                    <a href="#" id="fecha">Nacidos antes de 1980/02/01</a>
+                </div>
             </div>
-        </div>
+        </nav>
+        <div class="search">
+    <input type="search" id="search-input" placeholder="Buscar personaje...">
+</div>
     </header>
-    <ul id="lista">
-        
-    </ul>
+
+    <main>
+        <ul id="lista">
+        </ul>
+    </main>
+
     <div id="preloader">
-        
     </div>
+
     <script src="./introduccion.js"></script>
 </body>
 </html>

@@ -1,81 +1,160 @@
-:root{
-    --bg: #1daefc;
-    --texto: #ededed; 
-    --fondo: rgb(240,240,21);
-}
-*{
-    margin: 0;
-    padding: 0px;
-}
-body{
-    background-color: var(--bg);
-    font-family: 'Simpsonfont', sans-serif;
-    font-family: 'Akbar', sans-serif;
-                                                
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
-}
-header > .logo > img{
-    width: 100px;
-}
-header > nav > a{
-    margin: 0 15px;
-    color:var(--texto);
-    text-decoration: none;
-    font-weight: bold;
-}
-.search{
-    background-color: var(--fondo);
-    border-radius: 30px;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.search > input{
-    background-color: transparent;
-    outline-color: transparent;
-    border: none;
-    color: var(--texto);
-}
-#lista{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5%;
-    gap: 15px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-#lista li{
-    list-style: none;
-    background-color: white;
-    color: #1d1d1d;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 10px #1d1d1d;
-    transition: all box-shadow 5s ease-in-out;
-}
-#lista > li:hover{
-    box-shadow: 5px 4px 20px var(--fondo);
-    transform: scale(1.04);
+:root {
+    --simpsons-blue: #1daefc;
+    --simpsons-yellow: #fed90f;
+    --simpsons-text: #ffffff;
+    --card-bg: #f5f5f5;
+    --text-dark: #333;
+    --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
-#lista > li > h2{
-    width: 100%;
-    font-size: 1rem;
-    color: #1d1d1d;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#preloader{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    z-index: 10;
-    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2lrNzNqNjd0b2J4N2ZsZXA1cXU0ZHl3bTlvb3FycWdocTJpbjFqNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11gC4odpiRKuha/giphy.gif);
-    background-size: 100% 100%;
-    opacity: 0.8;
-    top:0;
-    left:0;
+
+body {
+    background-image: url('https://wallpapercave.com/wp/wp4267790.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Simpsonfont', sans-serif;
+    color: var(--text-dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(254, 217, 15, 0.9);
+    border-bottom: 4px solid #d1a90d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 150px;
+    filter: drop-shadow(2px 2px 2px var(--shadow-color));
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a, .dropbtn {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px var(--simpsons-text);
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+nav a:hover, .dropbtn:hover {
+    color: var(--simpsons-blue);
+    transform: translateY(-2px);
+}
+
+.search input {
+    background-color: var(--simpsons-text);
+    border: 3px solid var(--simpsons-text);
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    width: 250px;
+    transition: all 0.2s ease;
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--card-bg);
+    font-family: 'Simpsonfont', sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--simpsons-yellow);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--shadow-color);
+    z-index: 1;
+    border-radius: 12px;
+    border: 3px solid var(--text-dark);
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #fcc201;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 40px;
+}
+
+#lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    list-style: none;
+}
+
+#lista li {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 5px 5px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px solid white;
+    overflow: hidden;
+}
+
+#lista li:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 8px 8px 20px var(--shadow-color);
+}
+
+#lista li img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid #eee;
+}
+
+#lista li h2 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    text-shadow: 1px 1px 1px #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
