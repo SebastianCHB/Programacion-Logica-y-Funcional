@@ -40,6 +40,10 @@ const imprimir = (arr)=>{
     })
     ul.innerHTML = todo
 }
+
+
+
+
 document.querySelector("#mostrarTodo").addEventListener('click',(evt)=>{
     evt.preventDefault()
     console.log(arr_original)
