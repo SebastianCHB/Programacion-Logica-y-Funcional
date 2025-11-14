@@ -118,5 +118,58 @@ true
 
 % 10- ¿Cuáles son todas las especies que pertenecen a la familia Hominidae?
 /*
-
+descendiente(hominidea,X).
+X = homininae ;
+X = ponginae ;
+X = hominini ;
+X = gorillini ;
+X = homo ;
+X = pan ;
+X = human ;
+X = bonobo ;
+X = chimpanzee ;
+X = gorila ;
+X = gorilla ;
+X = pongo ;
+X = orangutan ;
 */
+% 11- ¿Qué géneros son hermanos taxonómicos de Homo?
+/*
+hermano(X,homo),padre(_,X),padre(_,homo).
+X = pan ;
+*/
+% 12 -¿Comparten Homo y Hylobates la misma familia?
+/*
+ familia(homo,hylobates).false.
+*/
+% 13- ¿Cuáles son los descendientes directos de la subfamilia Homininae?
+/*
+descendiente(homininae,X).
+X = hominini ;
+X = gorillini ;
+X = homo ;
+X = pan ;
+X = human ;
+X = bonobo ;
+X = chimpanzee ;
+X = gorila ;
+X = gorilla ;
+*/
+% 14- ¿Qué géneros están bajo la familia Hominidae?
+/*
+descendiente(hominidea,X),taxonomia(X,_,genus).
+X = homo ;
+X = pan ;
+X = pan ;
+X = gorila ;
+X = pongo ;
+*/
+% 15- ¿Cuál es la ruta taxonómica completa desde Homo hasta la superfamilia?
+/*
+?- descendiente(X,homo).
+X = hominini ;
+X = hominoidea ;
+X = hominidea ;
+X = homininae ;
+*/
+
