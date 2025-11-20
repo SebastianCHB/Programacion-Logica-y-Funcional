@@ -115,8 +115,11 @@ tangente(0.5,R).
 R = 0.5463024898437905.
 */
 
-redondeo(X,N, R) :- R is round(X,N).    
-
+redondeo(X, R) :- R is round(X).    
+/*
+redondeo(10.5,R).
+R = 11.
+*/
 
 % Comparaciónes
 
@@ -157,12 +160,42 @@ false.
 */
 
 
+% EXPRESIONES
 
+igualdadestricta(X,Y) :- X==Y. 
+/*
+igualdadestricta(10,10).
+true.
+*/
 
+distinta(X,Y) :- X\==Y.
+/*
+distinta(10,10).
+false.
+*/
 
+menorque(X,Y) :- X@<Y.
+/*
+menorque(4,10).
+true.
+*/
 
+mayorque(X,Y) :- X@>Y.
+/*
+ mayorque(4,10).
+false.
+*/
 
+menorigualque(X,Y) :- X@=<Y.
+/*
+menorigualque(10,10).
+true.
+*/
 
-
+mayorigualque(X,Y) :- X@>=Y.
+/*
+mayorigualque(10,10).
+true.
+*/
 
 
